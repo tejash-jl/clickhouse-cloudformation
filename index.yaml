@@ -1,5 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
-Description: (SO8019) Deploy ClickHouse cluster on Amazon Web Services (AWS) in an existing virtual private cloud (VPC). (qs-1s4ldl6s1)
+Description: Deploy ClickHouse cluster on Amazon Web Services (AWS) in an existing virtual private cloud (VPC).
 Metadata:
   LICENSE: Apache License Version 2.0
   QuickStartDocumentation:
@@ -1110,19 +1110,19 @@ Resources:
 Outputs:
   NetworkLoadBalancer2Nodes:
     Condition: 2NodesCondition
-    Description: Network Load Balancer with port 8123 in private subnet 1
+    Description: Network Load Balancer with port 9000 in private subnet 1
     Value: !GetAtt Nlb2NodesStack.Outputs.ElbDNSName
   NetworkLoadBalancer4Nodes:
     Condition: 4NodesCondition
-    Description: Network Load Balancer with port 8123 in private subnet 1
+    Description: Network Load Balancer with port 9000 in private subnet 1
     Value: !GetAtt Nlb4NodesStack.Outputs.ElbDNSName
   NetworkLoadBalancer6Nodes:
     Condition: 6NodesCondition
-    Description: Network Load Balancer with port 8123 in private subnet 1
+    Description: Network Load Balancer with port 9000 in private subnet 1
     Value: !GetAtt Nlb6NodesStack.Outputs.ElbDNSName
   NetworkLoadBalancer8Nodes:
     Condition: 8NodesCondition
-    Description: Network Load Balancer with port 8123 in private subnet 1
+    Description: Network Load Balancer with port 9000 in private subnet 1
     Value: !GetAtt Nlb8NodesStack.Outputs.ElbDNSName
   CloudWatchDashboard:
     Description: CloudWatch dashboard of ClickHouse cluster
